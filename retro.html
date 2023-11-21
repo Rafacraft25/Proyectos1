@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafíos Matemáticos - Retroalimentación</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url(retro.gif); /* Ruta de tu imagen de fondo para retroalimentación */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .retroalimentacion {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para legibilidad */
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Color del botón */
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Cambio de color al pasar el mouse sobre el botón */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="retroalimentacion">
+        <h2>Retroalimentación</h2>
+        <p>¡Ups! Parece que no has respondido correctamente a todas las preguntas.</p>
+        <p>Veamos las respuestas correctas:</p>
+        <p>1. ¿Cuánto es 10 + (5 * 2)? - Respuesta correcta: 20</p>
+        <p>2. Calcula el área de un rectángulo con base 8 cm y altura 6 cm. - Respuesta correcta: 48 cm²</p>
+        <p>3. Si tienes 3 hermanos y cada uno tiene 4 caramelos, ¿cuántos caramelos tienen en total? - Respuesta correcta: 12</p>
+        <p>No te preocupes, sigue practicando y mejorarás. ¡Inténtalo de nuevo!</p>
+        <button onclick="regresarInicio()">Regresar al Inicio</button>
+    </div>
+
+    <script>
+        function regresarInicio() {
+            // Puedes redirigir a la página de inicio o realizar alguna otra acción aquí
+            alert("Regresando al inicio...");
+            // window.location.href = "pagina-de-inicio.html"; // Descomenta esta línea para redirigir a una página específica
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafíos Matemáticos - Nivel Fácil</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url(facil.gif); /* Ruta de tu imagen de fondo para nivel fácil */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        form {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para legibilidad */
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Color del botón */
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Cambio de color al pasar el mouse sobre el botón */
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h2>Preguntas - Nivel Fácil</h2>
+        
+        <label for="pregunta1">1. Resuelve la siguiente operación: 10 + (5 * 2)</label>
+        <input type="number" id="pregunta1" name="pregunta1" required>
+
+        <label for="pregunta2">2. Calcula el área de un rectángulo con base 8 cm y altura 6 cm.</label>
+        <input type="number" id="pregunta2" name="pregunta2" required>
+
+        <label for="pregunta3">3. Si tienes 3 hermanos y cada uno tiene 4 caramelos, ¿cuántos caramelos tienen en total?</label>
+        <input type="number" id="pregunta3" name="pregunta3" required>
+
+        <button type="submit">Enviar Respuestas</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego Matemático 3D</title>
+  <style>
+    body { margin: 0; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script src="https://threejs.org/build/three.js"></script>
+
+  <script>
+    // Variables globales
+    let camera, scene, renderer;
+    let geometry, material, mesh;
+    let answer, score;
+
+    // Inicialización del juego
+    init();
+
+    // Animación del juego
+    animate();
+
+    // Función de inicialización
+    function init() {
+      // Configuración de la cámara
+      camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
+      camera.position.z = 5;
+
+      // Creación de la escena
+      scene = new THREE.Scene();
+
+      // Creación de la geometría y el material
+      geometry = new THREE.BoxGeometry();
+      material = new THREE.MeshNormalMaterial();
+
+      // Creación del objeto 3D
+      mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+
+      // Configuración del renderer
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // Inicialización de variables del juego
+      answer = Math.floor(Math.random() * 10) + 1; // Respuesta aleatoria entre 1 y 10
+      score = 0;
+
+      // Actualización de la escena
+      updateScene();
+    }
+
+    // Función de actualización de la escena
+    function updateScene() {
+      // Actualización del texto en la escena
+      if (mesh) {
+        scene.remove(mesh);
+      }
+
+      // Creación del nuevo objeto 3D con el texto
+      const textGeometry = new THREE.TextGeometry(`¿Cuánto es ${answer} + 3?`, {
+        font: new THREE.Font(),
+        size: 0.5,
+        height: 0.1
+      });
+      mesh = new THREE.Mesh(textGeometry, material);
+      scene.add(mesh);
+    }
+
+    // Función de animación
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Lógica del juego aquí (puedes manejar eventos de teclado, clics, etc.)
+
+      // Renderización de la escena
+      renderer.render(scene, camera);
+    }
+  </script>
+</body>
+</html>
+
